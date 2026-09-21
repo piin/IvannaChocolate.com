@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IVANNAC - Portafolio de ilustración y proyectos creativos."
+    />
+    <title>IVANNAC | Portafolio creativo</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="color-dots" aria-hidden="true">
+        <span class="dot dot-orange"></span>
+        <span class="dot dot-blue"></span>
+        <span class="dot dot-green"></span>
+        <span class="dot dot-purple"></span>
+      </div>
+
+      <a class="brand" href="#inicio">IVANNAC</a>
+
+      <div class="social-links" aria-label="Redes sociales">
+        <a class="social-instagram" href="#" aria-label="Instagram">◎</a>
+        <a class="social-facebook" href="#" aria-label="Facebook">f</a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">
+        Menú
+      </button>
+
+      <nav id="main-navigation" class="main-navigation" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#trabajo">Trabajo</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#tienda">Tienda</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section id="trabajo" class="gallery-section" aria-label="Galería de trabajos">
+        <a class="art-card art-one" href="#proyectos" aria-label="Ver ilustración uno">
+          <span class="art-number">01</span>
+        </a>
+        <a class="art-card art-two" href="#proyectos" aria-label="Ver ilustración dos">
+          <span class="art-number">02</span>
+        </a>
+        <a class="art-card art-three" href="#proyectos" aria-label="Ver ilustración tres">
+          <span class="art-number">03</span>
+        </a>
+        <a class="art-card art-four" href="#proyectos" aria-label="Ver ilustración cuatro">
+          <span class="art-number">04</span>
+        </a>
+        <a class="art-card art-five" href="#proyectos" aria-label="Ver ilustración cinco">
+          <span class="art-number">05</span>
+        </a>
+        <a class="art-card art-six" href="#proyectos" aria-label="Ver ilustración seis">
+          <span class="art-number">06</span>
+        </a>
+        <a class="art-card art-seven" href="#proyectos" aria-label="Ver ilustración siete">
+          <span class="art-number">07</span>
+        </a>
+        <a class="art-card art-eight" href="#proyectos" aria-label="Ver ilustración ocho">
+          <span class="art-number">08</span>
+        </a>
+        <a class="art-card art-nine" href="#proyectos" aria-label="Ver ilustración nueve">
+          <span class="art-number">09</span>
+        </a>
+      </section>
+
+      <section id="sobre-mi" class="about-section">
+        <div class="about-photo">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Retrato de Ivanna Camarena"
+            onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')"
+          />
+          <span class="photo-placeholder-text">Tu fotografía aquí</span>
+        </div>
+        <div class="about-copy">
+          <p class="about-title">¡Hola! Soy Ivanna Camarena</p>
+          <p>
+            Soy artista plástica. Nací y crecí en Guadalajara, Jalisco. Me gusta experimentar
+            diferentes técnicas de dibujo, ilustración, arte digital, pintura, grabado, escultura
+            y textil.
+          </p>
+          <p>
+            En mi obra me encuentro a mí; así como la relación que tenemos con la naturaleza, lo
+            femenino, la noche, la magia y el misticismo, todo esto con un toque de folclor mexicano.
+          </p>
+          <p>
+            He trabajado en proyectos de mural en colectivo y de forma independiente. Así como
+            participado en diversas exposiciones plásticas, en colectivo e individuales.
+          </p>
+        </div>
+      </section>
+
+      <section id="proyectos" class="info-section info-section-colored">
+        <p class="section-label">Proyectos</p>
+        <h2>Un archivo visual para explorar.</h2>
+        <p>Haz clic en las piezas de la galería para enlazarlas a proyectos, colecciones o encargos.</p>
+      </section>
+
+      <section id="tienda" class="info-section">
+        <p class="section-label">Tienda</p>
+        <h2>Obras y piezas disponibles próximamente.</h2>
+        <a class="shop-link" href="mailto:hola@ivannac.com">hola@ivannac.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="current-year"></span> IVANNAC</span>
+      <a href="#inicio">Volver arriba</a>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
