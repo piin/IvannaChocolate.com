@@ -80,10 +80,17 @@ a {
 }
 
 .social-links a {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
+  align-items: center;
+  display: inline-flex;
+  height: 2rem;
   text-decoration: none;
+  width: 2rem;
+}
+
+.social-links img {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .social-instagram {
