@@ -163,6 +163,46 @@ a {
   transform: scale(1.03);
 }
 
+.lightbox {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  opacity: 0;
+  padding: 3rem;
+  pointer-events: none;
+  position: fixed;
+  transition: opacity 180ms ease;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.lightbox-image {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  background: none;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 3rem;
+  line-height: 1;
+  padding: 0.25rem 0.75rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+}
+
 .art-number {
   color: transparent;
   font-size: 0.8rem;
