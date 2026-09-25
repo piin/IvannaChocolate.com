@@ -135,8 +135,8 @@ a {
   gap: 4rem 4.5rem;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  max-width: 82rem;
-  padding: 0 3.5rem 7rem;
+  max-width: 92rem;
+  padding: 0 2.5rem 7rem;
 }
 
 .art-card {
