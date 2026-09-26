@@ -132,11 +132,11 @@ a {
 
 .gallery-section {
   display: grid;
-  gap: 4rem 4.5rem;
+  gap: clamp(2rem, 3vw, 3.5rem);
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  max-width: 92rem;
-  padding: 0 2.5rem 7rem;
+  max-width: 100%;
+  padding: 0 clamp(1rem, 2.5vw, 2.5rem) 7rem;
 }
 
 .art-card {
@@ -269,8 +269,8 @@ a {
   gap: clamp(2rem, 5vw, 5rem);
   grid-template-columns: minmax(16rem, 1fr) minmax(18rem, 1fr);
   margin: 0 auto;
-  max-width: 92rem;
-  padding: 0 2.5rem 8rem;
+  max-width: 100%;
+  padding: 0 clamp(1rem, 2.5vw, 2.5rem) 8rem;
 }
 
 .about-photo {
