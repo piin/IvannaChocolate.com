@@ -28,6 +28,77 @@ a {
   color: inherit;
 }
 
+.site-loader {
+  align-items: center;
+  background: var(--color-paper);
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  transition: opacity 350ms ease, visibility 350ms ease;
+  z-index: 20;
+}
+
+.site-loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.loader-art {
+  height: clamp(12rem, 32vw, 17rem);
+  position: relative;
+  width: clamp(12rem, 32vw, 17rem);
+}
+
+.loader-art img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.loader-art .loader-flame {
+  animation: flame-flicker 420ms ease-in-out infinite alternate;
+  clip-path: polygon(
+    53% 13%,
+    59% 10%,
+    62% 16%,
+    64% 8%,
+    68% 22%,
+    65% 34%,
+    68% 42%,
+    64% 51%,
+    57% 50%,
+    53% 43%,
+    54% 29%
+  );
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: 61% 48%;
+}
+
+.site-loader > span {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+@keyframes flame-flicker {
+  from {
+    filter: brightness(0.92);
+    transform: rotate(-2deg) scale(0.97, 1);
+  }
+  to {
+    filter: brightness(1.18);
+    transform: rotate(2deg) scale(1.04, 1.06);
+  }
+}
+
 .site-header {
   align-items: center;
   display: grid;
@@ -458,5 +529,18 @@ h2 {
   .site-footer {
     font-size: 0.8rem;
     padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .loader-art .loader-flame {
+    animation: none;
   }
 }

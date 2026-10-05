@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-navigation");
 const currentYear = document.querySelector("#current-year");
+const siteLoader = document.querySelector(".site-loader");
 const artCards = document.querySelectorAll(".art-card");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
@@ -15,6 +16,25 @@ if (menuToggle && navigation) {
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
+}
+
+if (siteLoader) {
+  const hideSiteLoader = () => {
+    const minimumDisplayTime = 800;
+    const elapsedTime = performance.now();
+    const remainingTime = Math.max(0, minimumDisplayTime - elapsedTime);
+
+    window.setTimeout(() => {
+      siteLoader.classList.add("is-hidden");
+      siteLoader.setAttribute("aria-hidden", "true");
+    }, remainingTime);
+  };
+
+  if (document.readyState === "complete") {
+    hideSiteLoader();
+  } else {
+    window.addEventListener("load", hideSiteLoader, { once: true });
+  }
 }
 
 const closeLightbox = () => {
