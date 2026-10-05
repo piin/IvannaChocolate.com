@@ -316,6 +316,14 @@ a {
   margin: 0 0 1.8rem;
 }
 
+.about-signature {
+  display: block;
+  height: auto;
+  margin: 0.5rem 0 0 auto;
+  max-width: min(12rem, 65%);
+  width: 100%;
+}
+
 .about-title {
   color: var(--color-green);
   font-size: clamp(1.1rem, 2vw, 1.55rem);
