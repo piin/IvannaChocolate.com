@@ -46,56 +46,40 @@ a {
   visibility: hidden;
 }
 
-.loader-art {
-  height: clamp(12rem, 32vw, 17rem);
-  position: relative;
-  width: clamp(12rem, 32vw, 17rem);
-}
-
-.loader-art img {
-  display: block;
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
-}
-
-.loader-art .loader-flame {
-  animation: flame-flicker 420ms ease-in-out infinite alternate;
-  clip-path: polygon(
-    53% 13%,
-    59% 10%,
-    62% 16%,
-    64% 8%,
-    68% 22%,
-    65% 34%,
-    68% 42%,
-    64% 51%,
-    57% 50%,
-    53% 43%,
-    54% 29%
-  );
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform-origin: 61% 48%;
-}
-
-.site-loader > span {
+.loader-label {
   color: var(--color-muted);
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.22em;
-  margin-top: 0.75rem;
   text-transform: uppercase;
 }
 
-@keyframes flame-flicker {
-  from {
-    filter: brightness(0.92);
-    transform: rotate(-2deg) scale(0.97, 1);
+.loader-dots {
+  display: inline-flex;
+  letter-spacing: 0.08em;
+  min-width: 1.5em;
+}
+
+.loader-dots span {
+  animation: loading-dot 1s infinite;
+  opacity: 0.2;
+}
+
+.loader-dots span:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.loader-dots span:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+@keyframes loading-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.2;
   }
-  to {
-    filter: brightness(1.18);
-    transform: rotate(2deg) scale(1.04, 1.06);
+  30% {
+    opacity: 1;
   }
 }
 
@@ -540,7 +524,8 @@ h2 {
     transition-duration: 0.01ms !important;
   }
 
-  .loader-art .loader-flame {
+  .loader-dots span {
     animation: none;
+    opacity: 1;
   }
 }
