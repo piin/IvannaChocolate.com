@@ -20,14 +20,8 @@ if (currentYear) {
 
 if (siteLoader) {
   const hideSiteLoader = () => {
-    const minimumDisplayTime = 1800;
-    const elapsedTime = performance.now();
-    const remainingTime = Math.max(0, minimumDisplayTime - elapsedTime);
-
-    window.setTimeout(() => {
-      siteLoader.classList.add("is-hidden");
-      siteLoader.setAttribute("aria-hidden", "true");
-    }, remainingTime);
+    siteLoader.classList.add("is-hidden");
+    siteLoader.setAttribute("aria-hidden", "true");
   };
 
   if (document.readyState === "complete") {
