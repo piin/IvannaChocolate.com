@@ -46,6 +46,14 @@ a {
   visibility: hidden;
 }
 
+.loader-image {
+  display: block;
+  height: clamp(8rem, 24vw, 12rem);
+  margin-bottom: 1rem;
+  object-fit: contain;
+  width: clamp(8rem, 24vw, 12rem);
+}
+
 .loader-label {
   color: var(--color-muted);
   font-size: 1rem;
