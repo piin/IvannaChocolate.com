@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-navigation");
+const themeToggle = document.querySelector(".theme-toggle");
 const currentYear = document.querySelector("#current-year");
 const artCards = document.querySelectorAll(".art-card");
 const lightbox = document.querySelector(".lightbox");
@@ -15,6 +16,32 @@ if (menuToggle && navigation) {
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
+}
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem("ivannac-theme");
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const isDark = savedTheme ? savedTheme === "dark" : systemPrefersDark;
+
+  if (savedTheme) {
+    document.documentElement.dataset.theme = savedTheme;
+  }
+
+  const updateThemeToggle = (darkModeEnabled) => {
+    themeToggle.setAttribute("aria-pressed", String(darkModeEnabled));
+    themeToggle.textContent = darkModeEnabled ? "Modo claro" : "Modo oscuro";
+  };
+
+  updateThemeToggle(isDark);
+
+  themeToggle.addEventListener("click", () => {
+    const enableDarkMode = themeToggle.getAttribute("aria-pressed") !== "true";
+    const theme = enableDarkMode ? "dark" : "light";
+
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("ivannac-theme", theme);
+    updateThemeToggle(enableDarkMode);
+  });
 }
 
 const closeLightbox = () => {
