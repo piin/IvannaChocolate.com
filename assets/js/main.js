@@ -20,7 +20,7 @@ if (currentYear) {
 
 if (siteLoader) {
   const hideSiteLoader = () => {
-    const minimumDisplayTime = 800;
+    const minimumDisplayTime = 1800;
     const elapsedTime = performance.now();
     const remainingTime = Math.max(0, minimumDisplayTime - elapsedTime);
 
